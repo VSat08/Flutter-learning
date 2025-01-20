@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Center Widget'),
+      home: const MyHomePage(title: 'Text Widget'),
     );
   }
 }
@@ -34,20 +34,16 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.yellow,
-            child: Center(
-                child: Text(
-              "Centered Text",
-              style: TextStyle(fontSize: 18),
-            ))),
-      ),
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Text(
+          "Hello World",
+          style: TextStyle(
+              fontSize: 28,
+              color: Colors.orange,
+              fontWeight: FontWeight.w800,
+              backgroundColor: Colors.black),
+        ));
   }
 }
